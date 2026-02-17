@@ -18,7 +18,7 @@ Splunk supports multiple OS versions. In order to start we need to visit <a href
 
 <img width="1206" height="405" alt="image" src="https://github.com/user-attachments/assets/e7733aaa-89ef-45dc-bb18-7448e937adab" />
 
-#### Linux environment set up
+#### Setting up Splunk in Linux environment
 
 1. Downloaded files are located in 'Downloads' directory. Change directory to the one below.
 
@@ -40,3 +40,10 @@ tar xvzf splunk_installer.tgz
 
 <img width="485" height="58" alt="image" src="https://github.com/user-attachments/assets/6aa86c4c-bdeb-49fb-93b3-54c60a563551" />
 
+5. Now we will move the new folder to /opt directory in order to configure the Splunk.
+
+```
+mv splunk /opt/
+```
+
+6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to '/opt/splunk/bin/'. 
