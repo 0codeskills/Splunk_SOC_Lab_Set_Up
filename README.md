@@ -46,7 +46,7 @@ tar xvzf splunk_installer.tgz
 mv splunk /opt/
 ```
 
-6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to /opt/splunk/bin/.
+6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to /opt/splunk/bin/. Run command to initiate the Splunk instance, you will be asked to creata administrator account and password. When completed you will be presented with output similar to the one below.
 
 ```
 root@coffely:/opt/splunk/bin# cd /opt/splunk/bin/
@@ -81,3 +81,5 @@ The Splunk web interface is at http://coffely:8000
 root@coffely:/opt/splunk/bin# 
 
 ``` 
+
+7. 
