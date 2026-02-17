@@ -86,3 +86,14 @@ root@coffely:/opt/splunk/bin#
 
 <img width="1253" height="675" alt="image" src="https://github.com/user-attachments/assets/c86e7d71-8f57-4b62-aaad-63b9d09895e1" />
 
+#### Interacting with Splunk CLI
+
+To interact with Splunk CLI we need to change directory to /opt/splunk/
+
+```
+#Command to start all the necessary Splunk processes and enabling the server to accept incoming data
+./bin/splunk start
+
+#Command to stop Splunk server
+./bin/splunk stop
+```
