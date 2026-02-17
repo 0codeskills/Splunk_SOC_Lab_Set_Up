@@ -183,4 +183,63 @@ Done
 
 <img width="1274" height="258" alt="image" src="https://github.com/user-attachments/assets/f0792024-47b3-4b99-9504-42465b6048c2" />
 
+3. We will configure Splunk to listen on port 9997 and select Save.
+
+<img width="1263" height="410" alt="image" src="https://github.com/user-attachments/assets/cb2c0221-bb14-4555-a822-43f966c58c0a" />
+ 
+4. Listening port is now enabled
+
+<img width="1263" height="449" alt="image" src="https://github.com/user-attachments/assets/3eaff79a-d3f9-4213-8d6c-ead6f0b5dca1" />
+
+5. Now we need to create an index which will store all the received data, if we won't set it up by default Splunk will use main index.
+
+<img width="1271" height="613" alt="image" src="https://github.com/user-attachments/assets/c76b54dd-08ff-4417-ab43-7db7f481e115" />
+
+6. On the indexes page select New Index.
+
+<img width="1270" height="206" alt="image" src="https://github.com/user-attachments/assets/8e3786fa-73d6-4d63-b932-93adcad66a38" />
+
+7. On the New Index window fill out the Index Name field and click Save
+
+<img width="791" height="737" alt="image" src="https://github.com/user-attachments/assets/3a19168b-5804-4997-a78b-000c4e160363" />
+
+8. Now we will configure forwarder to ensure it sends the data to the correct destination. Back in Linux terminal, go to the /opt/splunkforwarder/bin directory
+
+```
+root@coffely:/opt/splunkforwarder/bin# ./splunk add forward-server SERVER_IP_ADDRESS:9997
+Splunk username: splunkadmin
+Password: 
+Added forwarding to: SERVER_IP_ADDRESS:9997.
+root@coffely:/opt/splunkforwarder/bin# 
+```
+9. Linux logs are stored in /var/log directory
+
+<img width="879" height="324" alt="image" src="https://github.com/user-attachments/assets/126c2232-c12b-40d2-bcaf-9c0f66342ef2" />
+
+10. We will now ingest syslog into Splunk
+
+<img width="859" height="73" alt="image" src="https://github.com/user-attachments/assets/ffa21d94-4928-40e9-8a9a-3c1840bc2307" />
+
+11. To confirm the configuration we can check the inputs.conf file in /opt/splunkforwarder/etc/apps/search/local directory
+
+```
+root@coffely:/opt/splunkforwarder/bin# cd /opt/splunkforwarder/etc/apps/search/local
+root@coffely:/opt/splunkforwarder/etc/apps/search/local# ls
+inputs.conf
+root@coffely:/opt/splunkforwarder/etc/apps/search/local# cat inputs.conf 
+[monitor:///var/log/syslog]
+disabled = false
+index = Linux_host
+root@coffely:/opt/splunkforwarder/etc/apps/search/local# 
+```
+
+12. Now we will use Logger a built-in command line tool to create test logs added to syslog file and we will search Splunk for those logs.
+
+```
+logger "coffely-has-the-best-coffee-in-town"
+tail -1 /var/log/syslog
+Feb 17 20:50:28 coffely ubuntu: coffely-has-the-best-coffee-in-town
+```
+
+<img width="1274" height="733" alt="image" src="https://github.com/user-attachments/assets/8d37e2fd-b5c7-4b6f-87a8-3640118cc0d7" />
 
