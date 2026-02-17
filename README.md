@@ -122,5 +122,55 @@ There are 2 types of forwarders:
 
 We will be using universal forwarders in the task. They can be downloaded from <a href="https://www.splunk.com/en_us/download/universal-forwarder.html?locale=en_us">Splunk website</a>
 
+<img width="1245" height="438" alt="image" src="https://github.com/user-attachments/assets/314e7e48-0264-4bb0-98da-02d5d72728a9" />
+
+1. After downloading the forwarder installer we will change directory to /home/ubuntu/Downloads/splunk/ and from there wil will run the command to install the forwarders.
+
+```
+tar xvzf splunkforwarder.tgz
+```
+
+2. We will no move the created 'splunkforwarder' folder to /opt/ directory.
+
+```
+mv splunkforwarder /opt/
+```
+
+3. Next we will change directory to /opt/splunkforwarder/ and will run the Splunk forwarder instance. We will be asked to create a user and password.
+
+```
+root@coffely:/opt/splunkforwarder# ./bin/splunk start --accept-license
+
+This appears to be your first time running this version of Splunk.
+
+Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+Create credentials for the administrator account.
+Characters do not appear on the screen when you type in credentials.
+
+Please enter an administrator username: splunkadmin
+Password must contain at least:
+   * 8 total printable ASCII character(s).
+Please enter a new password: 
+Please confirm new password: 
+Creating unit file...
+Failed to auto-set default user.
+Failed to create the unit file. Please do it manually later.
+
+
+Splunk> Another one.
+
+Checking prerequisites...
+	Checking mgmt port [8089]: not available
+ERROR: mgmt port [8089] - port is already bound.  Splunk needs to use this port.
+Would you like to change ports? [y/n]: y
+Enter a new mgmt port: 8090
+Setting mgmt to port: 8090
+The server's splunkd port has been changed.
+	Checking mgmt port [8090]: open
+Starting splunk server daemon (splunkd)...  
+Done
+```
+
+#### Configuring Splunk forwarder on Linux
 
 
