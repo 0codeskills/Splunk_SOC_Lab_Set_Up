@@ -46,4 +46,38 @@ tar xvzf splunk_installer.tgz
 mv splunk /opt/
 ```
 
-6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to "/opt/splunk/bin/". 
+6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to /opt/splunk/bin/.
+
+```
+root@coffely:/opt/splunk/bin# cd /opt/splunk/bin/
+root@coffely:/opt/splunk/bin# ./splunk start --accept-license
+
+This appears to be your first time running this version of Splunk.
+
+Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+Create credentials for the administrator account.
+Characters do not appear on the screen when you type in credentials.
+
+Please enter an administrator username: splunkadmin
+Password must contain at least:
+   * 8 total printable ASCII character(s).
+Please enter a new password: 
+Please confirm new password: 
+Copying '/opt/splunk/etc/openldap/ldap.conf.default' to '/opt/splunk/etc/openldap/ldap.conf'.
+Generating RSA private key, 2048 bit long modulus
+
+...
+...
+...
+
+Waiting for web server at http://127.0.0.1:8000 to be available............... Done
+
+
+If you get stuck, we're here to help.  
+Look for answers here: http://docs.splunk.com
+
+The Splunk web interface is at http://coffely:8000
+
+root@coffely:/opt/splunk/bin# 
+
+``` 
