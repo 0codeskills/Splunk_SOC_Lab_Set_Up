@@ -46,4 +46,4 @@ tar xvzf splunk_installer.tgz
 mv splunk /opt/
 ```
 
-6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to '/opt/splunk/bin/'. 
+6. Now that all the necessary binaries are installed on the system, we will start the instance of Splunk. Change directory to "/opt/splunk/bin/". 
