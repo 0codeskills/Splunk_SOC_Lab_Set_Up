@@ -21,3 +21,7 @@ Splunk supports multiple OS versions. In order to start we need to visit <a href
 #### Linux environment set up
 
 1. Downloaded files are located in 'Downloads' directory. Change directory to the one below.
+
+<img width="574" height="142" alt="image" src="https://github.com/user-attachments/assets/d2d31687-06de-4770-93fb-63a9a12c64ac" />
+
+2. 
