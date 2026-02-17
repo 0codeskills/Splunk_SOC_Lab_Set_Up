@@ -82,4 +82,7 @@ root@coffely:/opt/splunk/bin#
 
 ``` 
 
-7. 
+7. Now we can access Splunk in web browser by going to http://coffely:8000
+
+<img width="1253" height="675" alt="image" src="https://github.com/user-attachments/assets/c86e7d71-8f57-4b62-aaad-63b9d09895e1" />
+
