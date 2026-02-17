@@ -112,3 +112,15 @@ To interact with Splunk CLI we need to change directory to /opt/splunk/
 #Command provides all the help options
 ./bin/splunk help
 ```
+
+#### Data ingestion in Splunk
+
+Configuring data ingestion is crucial part of Splunk. It allows data to be normalized, indexed and searchable by users. Splunk accepts data from different sources including Operating System logs, Web Applications, Inrusion Detection logs, Osquery logs, etc. In this task we will use forwarders to ingest Linux logs into Splunk instance. 
+There are 2 types of forwarders:
+- Heavy forwarders - used when we need to apply filter, analuze or make changes to the logs at source before sending them to the destination
+- Universal frowarders - lightweight agent installed on the target host to forwards the logs to the Splunk instance
+
+We will be using universal forwarders in the task. They can be downloaded from <a href="https://www.splunk.com/en_us/download/universal-forwarder.html?locale=en_us">Splunk website</a>
+
+
+
