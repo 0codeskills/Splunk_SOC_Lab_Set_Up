@@ -24,4 +24,10 @@ Splunk supports multiple OS versions. In order to start we need to visit <a href
 
 <img width="574" height="142" alt="image" src="https://github.com/user-attachments/assets/d2d31687-06de-4770-93fb-63a9a12c64ac" />
 
-2. 
+2. Elevate to root user by running the following command.
+
+```
+sudo su
+```
+
+3. 
