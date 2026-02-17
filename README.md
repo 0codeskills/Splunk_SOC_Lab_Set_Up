@@ -30,4 +30,10 @@ Splunk supports multiple OS versions. In order to start we need to visit <a href
 sudo su
 ```
 
-3. 
+3. Uncompress the splunk installer file with the following command.
+
+```
+tar xvzf splunk_installer.tgz
+```
+
+4.
