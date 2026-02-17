@@ -94,6 +94,21 @@ To interact with Splunk CLI we need to change directory to /opt/splunk/
 #Command to start all the necessary Splunk processes and enabling the server to accept incoming data
 ./bin/splunk start
 
-#Command to stop Splunk server
+#Command to stop the Splunk server
 ./bin/splunk stop
+
+#Command to restart the Splunk server
+./bin/splunk restart
+
+#Command to check the status of the Splunk server
+./bin/splunk status
+
+#Command to add a single event to the Splunk index. Good for testing purposes
+./bin/splunk add oneshot
+
+#Command to search for specific events or perfor, more complex searches using Splunk's search language
+./bin/splunk search coffely
+
+#Command provides all the help options
+./bin/splunk help
 ```
