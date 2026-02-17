@@ -173,4 +173,14 @@ Done
 
 #### Configuring Splunk forwarder on Linux
 
+1. We will log into Splunk and Go to Settings -> Forward and receiving as below.
+
+<img width="1274" height="563" alt="image" src="https://github.com/user-attachments/assets/f68a35db-8f60-4b7d-8624-b2e8130e59af" />
+
+2. As we want to configure receiving we select COnfigure receiving and on the next page select New Receiving Port
+
+<img width="1262" height="432" alt="image" src="https://github.com/user-attachments/assets/ae7e2d3b-846e-45b0-baef-c30bf62f41c5" />
+
+<img width="1274" height="258" alt="image" src="https://github.com/user-attachments/assets/f0792024-47b3-4b99-9504-42465b6048c2" />
+
 
